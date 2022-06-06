@@ -107,7 +107,7 @@ if os.path.exists("servermods"):
     launch += mod_param("serverMod", local.mods("servermods"))
 
 # output rpt log to profilename_log.rpt
-launch += ">>" + os.environ["ARMA_PROFILE"] + "_log.rpt" + "2>&1"
+launch += ">>" + os.environ["ARMA_PROFILE"] + "_log.rpt" + " 2>&1"
 
 print("LAUNCHING ARMA SERVER WITH", launch, flush=True)
 os.system(launch)
