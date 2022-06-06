@@ -79,6 +79,7 @@ List of Steam branches can be found on the Community Wiki, [Arma 3: Steam Branch
 ## Creator DLC
 
 To use a Creator DLC the `STEAM_BRANCH` must be set to `creatordlc`
+Remember to map a suitable folder (i.e /cdlc/vn:/arma3/vn) to persist/share CDLC files across restarts/containers.
 
 | Name | Flag |
 | ---- | ---- |
