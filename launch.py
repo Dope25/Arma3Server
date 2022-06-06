@@ -22,6 +22,9 @@ if not os.path.isdir(KEYS):
         os.remove(KEYS)
     os.makedirs(KEYS)
 
+if os.environ["ARMA_CDLC"] != "":
+    os.environ["STEAM_BRANCH"] = "creatordlc"
+
 if os.environ["SKIP_INSTALL"] in ["", "false"]:
     # Install Arma
 
@@ -102,6 +105,9 @@ launch += ' -port={} -name="{}" -profiles="/arma3/configs/profiles"'.format(
 
 if os.path.exists("servermods"):
     launch += mod_param("serverMod", local.mods("servermods"))
+
+# output rpt log to profilename_log.rpt
+launch += ">>" + os.environ["ARMA_PROFILE"] + "_log.rpt" + "2>&1"
 
 print("LAUNCHING ARMA SERVER WITH", launch, flush=True)
 os.system(launch)
