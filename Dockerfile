@@ -12,6 +12,7 @@ RUN apt-get update \
         lib32gcc-s1 \
         wget \
         ca-certificates \
+        xutils-dev \
     && \
     apt-get remove --purge -y \
     && \
